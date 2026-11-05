@@ -6,6 +6,21 @@ header.nav {
   height: 100px;
 }
 
+@supports (animation-timeline: view()) {
+  header.nav {
+    animation: forwards nav;
+    animation-timeline: --hero-view;
+    animation-range: exit-crossing 50% exit-crossing 70%;
+  }
+}
+
+@keyframes nav {
+  to {
+    height: var(--header-height);
+    background-color: var(--bg);
+  }
+}
+
 header.nav .content {
   width: 1000px;
   max-width: 100%;
@@ -35,6 +50,30 @@ header.nav h1 svg .cls-1 {
   stroke: rgba(255, 255, 255, 0);
   stroke-width: 2px;
 }
+header.nav h1 svg.animate .cls-1 {
+  fill: rgba(255, 255, 255, 0);
+  stroke: var(--green);
+  stroke-dasharray: 1000;
+  animation: 3s ease-in-out drawLogo;
+}
+
+@media (prefers-reduced-motion) {
+  header.nav h1 svg.animate .cls-1 {
+    animation: none;
+    fill: rgba(255, 255, 255, 1);
+    stroke: rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes drawLogo {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 header.nav .navigation ul {
   list-style: none;
   padding: 0;
