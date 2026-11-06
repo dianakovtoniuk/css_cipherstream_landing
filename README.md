@@ -1,6 +1,6 @@
 # Cipherstream Landing
 
-A dark, scroll-driven landing page for a fictional tech company called CipherStream. It has a video hero, feature cards, a team section, stacking service cards and a footer.
+A scroll-driven landing page for a fictional tech company called CipherStream. It has a video hero, feature cards, a team section, stacking service cards and a footer.
 
 ## Features
 
