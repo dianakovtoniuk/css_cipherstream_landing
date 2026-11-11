@@ -15,7 +15,7 @@ All scroll effects use CSS scroll-driven animations (`animation-timeline`), so a
 
 ## Run
 
-No build step. Open `index.html` in a browser.
+Open `index.html` in a browser.
 
 ## Project structure
 
